@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Secret Codes</title>
+    <script type="text/javascript" src='http://www.cornify.com/js/cornify.js'></script>
+    <style media="screen">
+      h2{text-align: center}
+    </style>
+
+  </head>
+  <body>
+
+    <h2>Type "hellyeah" and see the magic!</h2>
+<script>
+
+    const pressed=[];
+    const secretcode='hellyeah';
+
+    window.addEventListener('keyup',(e)=>{
+      pressed.push(e.key);
+      pressed.splice(-secretcode.length-1,pressed.length-secretcode.length);
+      if(pressed.join('').includes(secretcode)){
+        cornify_add();
+      }
+      console.log(pressed);
+    });
+
+    </script>
+  </body>
+</html>
